@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 03:13:24 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDM6MDg6NTggUE07MjUzOQ=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDM6MTM6MjQgUE07MTsyNjM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fix" type="Real" array="False" size=""/>
+            <declare name="ppu" type="Real" array="False" size=""/>
+            <declare name="cpu" type="Real" array="False" size=""/>
+            <declare name="bep" type="Real" array="False" size=""/>
+            <input variable="fix"/>
+            <input variable="ppu"/>
+            <input variable="cpu"/>
+            <assign variable="bep" expression="fix / (ppu - cpu)"/>
+            <output expression="&quot;The break even point for your business is $&quot; &amp;bep" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

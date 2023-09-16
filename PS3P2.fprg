@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 01:17:14 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDE6MTM6NDEgUE07MjUyNQ=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDE6MTc6MTQgUE07MTsyNjM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ppsh" type="Real" array="False" size=""/>
+            <declare name="csp" type="Real" array="False" size=""/>
+            <declare name="quant" type="Real" array="False" size=""/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <input variable="ppsh"/>
+            <input variable="csp"/>
+            <input variable="quant"/>
+            <assign variable="value" expression="(csp - ppsh) * quant"/>
+            <output expression="&quot; The current value of this stock is $&quot; &amp;value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

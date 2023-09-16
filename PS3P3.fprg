@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 02:29:23 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDE6MzE6MjggUE07MjUzMA=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDI6Mjk6MjMgUE07MTsyNjQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="meal" type="Real" array="False" size=""/>
+            <declare name="tipval1" type="Real" array="False" size=""/>
+            <declare name="tipval2" type="Real" array="False" size=""/>
+            <declare name="tipval3" type="Real" array="False" size=""/>
+            <declare name="totval1" type="Real" array="False" size=""/>
+            <declare name="totval2" type="Real" array="False" size=""/>
+            <declare name="totval3" type="Real" array="False" size=""/>
+            <input variable="meal"/>
+            <assign variable="tipval3" expression="( meal * 0.2 )"/>
+            <assign variable="tipval2" expression="( meal * 0.18 )"/>
+            <assign variable="tipval1" expression="( meal * 0.15 )"/>
+            <assign variable="totval1" expression="( meal + tipval1 )"/>
+            <assign variable="totval2" expression="( meal + tipval2 )"/>
+            <assign variable="totval3" expression="( meal + tipval3 )"/>
+            <output expression="&quot; Your meal cost is $&quot; &amp;meal&amp; &quot; With a tip of 15% your tip total is $&quot; &amp;tipval1&amp; &quot; and your total is $&quot; &amp;totval1" newline="True"/>
+            <output expression="&quot; Your meal cost is $&quot; &amp;meal&amp; &quot; With a tip of 18% your tip total is $&quot; &amp;tipval2&amp; &quot; and your total is $&quot; &amp;totval2" newline="True"/>
+            <output expression="&quot; Your meal cost is $&quot; &amp;meal&amp; &quot; With a tip of 20% your tip total is $&quot; &amp;tipval2&amp; &quot; and your total is $&quot; &amp;totval2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

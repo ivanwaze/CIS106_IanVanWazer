@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 01:03:49 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDE6MDA6MTAgUE07MjUxNw=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMDktMTY7MDE6MDM6NDkgUE07MTsyNjQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="first" type="Real" array="False" size=""/>
+            <declare name="sec" type="Real" array="False" size=""/>
+            <declare name="totscr" type="Real" array="False" size=""/>
+            <input variable="first"/>
+            <input variable="sec"/>
+            <assign variable="totscr" expression="(0.6 * first) + (0.4 * sec)"/>
+            <output expression="&quot; The total exam score is &quot; &amp;totscr" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
