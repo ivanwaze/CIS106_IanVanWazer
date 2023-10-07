@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 03:07:10 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMTAtMDc7MTI6MTQ6MjAgUE07MjUxNw=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMTAtMDc7MDM6MDc6MTAgUE07MzsyNjI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="ext" type="Real" array="False" size=""/>
+            <declare name="disc" type="Real" array="False" size=""/>
+            <declare name="ans" type="String" array="False" size=""/>
+            <declare name="discamt" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="grandtotal" type="Real" array="False" size=""/>
+            <assign variable="grandtotal" expression="0"/>
+            <output expression="&quot; Do you want to continue ? (Yes or No)&quot;" newline="True"/>
+            <input variable="ans"/>
+            <while expression="ans == &quot;Yes&quot;">
+                <output expression="&quot; Enter quantity &quot;" newline="True"/>
+                <input variable="qty"/>
+                <output expression="&quot; Enter the price per item &quot;" newline="True"/>
+                <input variable="price"/>
+                <assign variable="ext" expression="qty * price"/>
+                <if expression="ext &gt;= 10000">
+                    <then>
+                        <assign variable="disc" expression="0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="disc" expression="0.10"/>
+                    </else>
+                </if>
+                <assign variable="discamt" expression="disc * ext"/>
+                <assign variable="total" expression="ext - discamt"/>
+                <output expression="&quot; Quantity is &quot; &amp;qty&amp; &quot; price per item is $&quot; &amp;price" newline="True"/>
+                <output expression="&quot; The total discount for your purchase is $&quot; &amp;discamt&amp; &quot; with a discount of &quot; &amp;disc&amp; &quot;%&quot;" newline="True"/>
+                <output expression="&quot; Your total is $&quot; &amp;total" newline="True"/>
+                <output expression="&quot; Do you want to continue ? (Yes or No)&quot;" newline="True"/>
+                <input variable="ans"/>
+            </while>
+            <assign variable="grandtotal" expression="grandtotal + total"/>
+            <output expression="&quot; Grand total of all purchases is $&quot; &amp;grandtotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

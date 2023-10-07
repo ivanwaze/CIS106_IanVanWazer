@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ivanw"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 01:56:41 PM"/>
+        <attribute name="created" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMTAtMDc7MTI6MTQ6MjAgUE07MjUxNw=="/>
+        <attribute name="edited" value="aXZhbnc7SVZXLTQ0MzEzMDcyOzIwMjMtMTAtMDc7MDE6NTY6NDEgUE07MTsyNjMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lstnm" type="String" array="False" size=""/>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="ans" type="String" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <output expression="&quot; Do you want to continue ? (Yes or No)&quot;" newline="True"/>
+            <input variable="ans"/>
+            <while expression="ans == &quot;Yes&quot;">
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot; Enter student last name &quot;" newline="True"/>
+                <input variable="lstnm"/>
+                <output expression="&quot; Enter first exam score &quot;" newline="True"/>
+                <input variable="exam1"/>
+                <output expression="&quot; Enter second exam score &quot;" newline="True"/>
+                <input variable="exam2"/>
+                <assign variable="avg" expression="(exam1 + exam2)/ 2"/>
+                <output expression="&quot; The average exam score for &quot; &amp;lstnm&amp; &quot; is &quot; &amp;avg&amp; &quot;%&quot;" newline="True"/>
+                <output expression="&quot; Do you want to continue ? (Yes or No)&quot;" newline="True"/>
+                <input variable="ans"/>
+            </while>
+            <output expression="&quot; Total number of students is &quot; &amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
